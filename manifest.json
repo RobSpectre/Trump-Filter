@@ -2,13 +2,25 @@
   "name": "Jeter Filter",
   "version": "0.1",
   "description": "Remove Derek Jeter from the Internet.",
-  "browser_action": {
-    "default_icon": "icon.png"
+  "background_page": "background.html",
+  "page_action" :
+  {
+    "default_icon" : "icon-big.png",
+    "default_title" : "Derek Jeter is on this page!"
   },
   "content_scripts": [
-  {
-    "matches": [<all_urls>],
-    "css": ["index.css"],
-    "js": ["jquery.js", "filter.js"]
-   }
+    { 
+       "matches": [
+        "http://*/*",
+        "https://*/*"
+      ],
+      "js": ["jquery.js", "filter.js"],
+      "run_at": "document_idle",
+      "all_frames": false
+    }
+  ],
+  "icons" : {
+    "19" : "icon.png",
+    "130" : "icon-big.png"
+  }
 }
