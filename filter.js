@@ -5,24 +5,24 @@
  */
 
 // Variables
-var regex = /Jeter/;
+var regex = /Jeter/i;
 var search = regex.exec(document.body.innerText);
 
 
 // Functions
 function filterMild() {
 	console.log("Filtering Number Two with Vindictive filter...");
-	return $(":contains('Jeter'):not('body'):not('html'):not('div')");
+	return $(":contains('Jeter'), :contains('JETER'), :contains('jeter')").filter(":not('body'):not('html'):not('div')");
 }
 
 function filterDefault () {
 	console.log("Filtering Number Two with Default filter...");
-	return $(":contains('Jeter'):not('body'):not('html'):not('div')").closest('div');
+	return $(":contains('Jeter'), :contains('JETER'), :contains('jeter')").filter(":not('body'):not('html'):not('div')").closest('div');
 }
 
 function filterVindictive() {
 	console.log("Filtering Number Two with Vindictive filter...");
-	return $(":contains('Jeter'):only-child:last-child:not('body'):not('html')");
+	return $(":contains('Jeter'), :contains('JETER'), :contains('jeter')").filter(":only-child:last-child:not('body'):not('html')");
 }
 
 function getElements(filter) {
