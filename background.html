@@ -1,11 +1,31 @@
-<!DOCTYPE html> 
+<!DOCTYPE html>
+<!-- -
+Jeter Filter - Background Page
+
+Four functions currently:
+
+	1) Display badge in address bar alerting user that Number Two may be on page.
+	2) Log URI with FluidInfo.
+	3) Log event with Google Analytics.
+	4) Get extension's stored values.
+ --> 
 <html> 
-  <head> 
-    <script> 
+  <head>
+  	<script type="text/javascript" src="analytics.js"></script>
+    <script>  
       function onRequest(request, sender, sendResponse) {
-        chrome.pageAction.show(sender.tab.id);
-        sendResponse({});
-      };
+		if (request.method == "loadFilter") {
+			console.log("Retrieving user's filter settings...");
+			console.log(localStorage.selectedFilter);
+			sendResponse({filter: localStorage.selectedFilter});
+		} else {
+			console.log("Putting badge on address bar.");
+			chrome.pageAction.show(sender.tab.id);
+			console.log("Logging URL with Number Two: " + sender.tab.url);
+			_gaq.push(['_trackEvent', 'Filter', sender.tab.url]);
+			sendResponse({});
+		}
+      }
       chrome.extension.onRequest.addListener(onRequest);
     </script> 
   </head> 

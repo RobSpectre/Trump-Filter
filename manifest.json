@@ -1,12 +1,13 @@
 {
   "name": "Jeter Filter",
-  "version": "0.1",
+  "version": "0.5",
   "description": "Remove Derek Jeter from the Internet.",
   "background_page": "background.html",
+  "options_page": "options.html",
   "page_action" :
   {
     "default_icon" : "icon-big.png",
-    "default_title" : "Derek Jeter is on this page!"
+    "default_title" : "Warning: Number Two is on this page!"
   },
   "content_scripts": [
     { 

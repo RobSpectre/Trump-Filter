@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<!-- -
+Jeter Filter - Options Page
+
+Allows user to adjust filtration settings.
+ --> 
+<html>
+<head>
+	<title>Options for Jeter Filter</title>
+	<script type="text/javascript" src="options.js"></script>
+	<script type="text/javascript" src="analytics.js"></script>
+</head>
+<body onload="loadOptions()">
+	<h1>Filter Setting</h1>
+	<select id="filter">
+		<option value="mild">Mild</option>
+		<option value="default">Default</option>
+		<option value="vindictive">Vindictive</option>
+	</select>
+	<br />
+	<button onclick="saveOptions()">Save</button>
+	<br />
+	<button onclick="eraseOptions()">Restore default</button>
+</body>
+</html>
