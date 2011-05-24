@@ -1,25 +1,76 @@
-<!DOCTYPE html>
 <!-- -
 Jeter Filter - Options Page
 
 Allows user to adjust filtration settings.
  --> 
+<!DOCTYPE html>
 <html>
 <head>
 	<title>Options for Jeter Filter</title>
-	<script type="text/javascript" src="options.js"></script>
-	<script type="text/javascript" src="analytics.js"></script>
+	<link href="styles/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" />
+	<link href="styles/index.css" rel="stylesheet" type="text/css" />
+	<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
+	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
+	<script type="text/javascript" src="js/options.js"></script>
+	<script type="text/javascript" src="js/analytics.js"></script>
+	<script type="text/javascript">
+		$(function() {
+			$('#slider').slider({
+				//step: 25,
+				min: 0,
+				max: 500,
+				slide: function( event, ui ) {	
+					$('#setting').text(sliderToFilter(ui.value));
+					for (key in values) {
+						$('#' + values[key]).removeClass("descriptionShow");
+					}
+					$('#' + sliderToFilter(ui.value)).addClass("descriptionShow");
+					saveOptions();
+				}
+			});
+			loadOptions(values);
+			$('#setting').text(values[ui.value]);
+			$('#' + values[ui.value]).addClass("descriptionShow");
+		});	
+	</script>
 </head>
-<body onload="loadOptions()">
-	<h1>Filter Setting</h1>
-	<select id="filter">
-		<option value="mild">Mild</option>
-		<option value="default">Aggressive</option>
-		<option value="vindictive">Vindictive</option>
-	</select>
-	<br />
-	<button onclick="saveOptions()">Save</button>
-	<br />
-	<button onclick="eraseOptions()">Restore default</button>
+<body>
+	<div id="container">
+		<div id="header">
+		</div>
+		<div id="filtersettings">
+			<h1>Filter Sensitivity</h1>
+			<div id="slider"></div>
+			<h2 id="setting"></h2>
+		</div>
+		<div id="descriptions">
+			<div id="Mild" class="description">
+				<h3>Least intrusive, least safe.</h3>
+				<ul>
+					<li>Removes individual mentions of Number Two.</li>
+					<li>Does not remove parent block elements.</li>
+					<li>Ensure all page features are usable.</li>
+					<li>For those who merely hate Derek Jeter.</li>
+				</ul>
+			</div>
+			<div id="Aggressive" class="description">
+				<h3>Default setting.  Great protection.</h3>
+				<ul>
+					<li>Removes sections of page likely to contain Number Two.</li>
+					<li>Preserves elements of page unlikely to contain Number Two.</li>
+					<li>Best balance of protection and usefulness.</li>
+					<li>For those who really hate Derek Jeter.</li>
+				</ul>
+			</div>
+			<div id="Vindictive" class="description">
+				<h3>Wipe out the evil from the very face of the Internet.</h3>
+				<ul>
+					<li>Sweeping removal of all possible exposure to Number Two.</li>
+					<li>Ensures no possible exposure to any shortstop horror.</li>
+					<li>For those who really, <strong>really</strong> hate Derek Jeter.</li>
+				</ul>
+			</div>
+		</div>
+	</div>
 </body>
 </html>

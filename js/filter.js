@@ -26,9 +26,9 @@ function filterVindictive() {
 }
 
 function getElements(filter) {
-   if (filter == "mild") {
+   if (filter == "Mild") {
 	   return filterMild();
-   } else if (filter == "vindictive") {
+   } else if (filter == "Vindictive") {
 	   return filterVindictive();
    } else {
 	   return filterDefault();
