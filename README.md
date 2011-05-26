@@ -13,9 +13,10 @@ exposure to the most disgusting, most vile, most gag-reflexive content imaginabl
 I am speaking, of course, about content with Derek Jeter.
 
 The Jeter Filter is a Chrome extension that removes Derek Jeter from the Internet, thus ending this long national nightmare.  With this extension,
-you can enjoy a safe browsing experience with active search and removal of Derek Jeter on the pages you visit.  Users can adjust the Jeter Filter to
-the setting that fits their lifestyle, choosing between "Mild," "Aggressive," and the safest, most popular "Vindictive."  Further, all sites found to
-contain Jeter are anonymously logged to FluidInfo, making it easier for developers on other platforms to add Jeter filtering to their experiences.
+you can enjoy a safe browsing experience with active search and removal of Derek Jeter on the pages you visit.  You can adjust the Jeter Filter to
+the setting that fits your lifestyle, choosing between "Mild," "Aggressive," and the safest, most popular "Vindictive."  Further, all sites found to
+contain Jeter while you are using the Jeter Filter are anonymously logged to FluidInfo, making it easier for developers on other platforms to add 
+Jeter filtering to their experiences.
 
 This means the more you browse with the Jeter Filter, the easier it becomes for the world to filter more Jeter.
 
