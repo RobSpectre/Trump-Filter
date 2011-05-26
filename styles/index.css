@@ -1,15 +1,67 @@
+/*	Main styles		*/
+html, body {
+	background: black;
+	width: 100%;
+	font-family: Verdana, sans-serif;
+}
+
+#container {
+	background: white;
+	width: 750px;
+	margin: auto;	
+}
+
+
+/*	Header	*/
+#header {
+	background: #a3a2a8 url('/images/icon-big.png') center no-repeat;
+	width: 100%;
+	height: 130px;
+}
+
+
+/*	Slider		*/
+#filtersettings {
+	width: 600px;
+	margin: auto;
+}
+
+#filtersettings h2, h3 {
+	text-align: center;	
+}
+
+#filtersettings p {
+	font-size: 8px;
+}
+
+#less {
+	margin: -15px 0 0 550px;
+	float: left;
+}
+
+#more {
+	margin: -15px 0 0 5px;
+	float: left;
+}
+
+
+/*	Descriptions 	*/
 .description {
 	display: none;
 }
 
 .descriptionShow {
-	display: True;	
+	width: 475px;
+	margin: auto;	
 }
 
-.red {
-	color: red;
-}
 
-.green {
-	color: green;
+/*	Footer	*/
+
+#footer {
+	background: black;
+	width: 100%;
+	font-size: 12px;
+	text-align: center;
+	color: white;
 }
