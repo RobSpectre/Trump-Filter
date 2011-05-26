@@ -21,16 +21,11 @@ Allows user to adjust filtration settings.
 				max: 500,
 				slide: function( event, ui ) {	
 					$('#setting').text(sliderToFilter(ui.value));
-					for (key in values) {
-						$('#' + values[key]).removeClass("descriptionShow");
-					}
-					$('#' + sliderToFilter(ui.value)).addClass("descriptionShow");
+					setDescriptions(values, sliderToFilter(ui.value));
 					saveOptions();
 				}
 			});
 			loadOptions(values);
-			$('#setting').text(values[ui.value]);
-			$('#' + values[ui.value]).addClass("descriptionShow");
 		});	
 	</script>
 </head>

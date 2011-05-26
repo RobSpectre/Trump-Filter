@@ -2,6 +2,10 @@
 	display: none;
 }
 
+.descriptionShow {
+	display: True;	
+}
+
 .red {
 	color: red;
 }
