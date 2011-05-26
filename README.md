@@ -32,16 +32,12 @@ Features
 * Anonymously logs URIs containing Derek Jeter on FluidInfo in an effort to make filtering Derek Jeter easier for app developers worldwide.
 
 
-Usage
---------------------------
-Simple install the Chrome Extension from the Chrome Web Store here:
-
-Then surf the web, comforted by the protection you are now afforded.
-
-
 Installation (for Users)
 --------------------------
-Just simply install the extension from the Chrome Web Store!
+
+Just install the extension from the Chrome Web Store!
+
+Then surf the web, comforted by the protection you are now afforded.
 
 
 Installation (for Developers)
