@@ -19,6 +19,10 @@ function loadOptions(values) {
 		selectedFilter = defaultFilter;
 	}
 	
+	if (sliderValue == undefined) {
+		sliderValue = 250;
+	}
+	
 	var i = 0;
 	for (value in values) {
 		if (values[value] === selectedFilter) {
