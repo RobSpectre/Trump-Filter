@@ -9,6 +9,11 @@
     "default_icon" : "images/icon-19x19.png",
     "default_title" : "Warning: Number Two is on this page!"
   },
+  "permissions": [
+    "tabs",
+    "http://fluiddb.fluidinfo.com/*",
+    "unlimitedStorage"
+	],
   "content_scripts": [
     { 
        "matches": [
