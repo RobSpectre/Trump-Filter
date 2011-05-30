@@ -1,67 +1,138 @@
 /*	Main styles		*/
 html, body {
-	background: black;
 	width: 100%;
 	font-family: Verdana, sans-serif;
 }
 
+a {
+	color: white;
+	text-decoration: none;
+}
+
+body {
+	background: url('/images/background-1600x1294.png') no-repeat;
+	margin: 120px 0 0 0;
+}
+
+div {
+	margin: 0;
+	padding: 0;	
+	diplay: block;
+}
+
 #container {
-	background: white;
-	width: 750px;
-	margin: auto;	
+	background: rgba(36, 38, 58, 0.5);
+	width: 700px;
+	margin: 0 auto 0 auto;
+	-webkit-border-radius: 5px;
+}
+
+.contentContainer {
+	background: rgba(255, 255, 255, 0.9);
+	width: 100%;
+	margin: 0;
+	padding: 2px 0 10px 0;	
 }
 
 
 /*	Header	*/
 #header {
-	background: #a3a2a8 url('/images/icon-big.png') center no-repeat;
+	background: url('/images/bosoxlogo-700x135.png') center no-repeat;
 	width: 100%;
-	height: 130px;
+	height: 135px;
+	-webkit-border-top-left-radius: 15px;
+	-webkit-border-top-right-radius: 15px;
 }
 
+#header h1 {
+	display: none;
+}
 
 /*	Slider		*/
 #filtersettings {
-	width: 600px;
-	margin: auto;
+	padding: 10px 0 10px 0;
 }
 
-#filtersettings h2, h3 {
+#filtersettings h2, #filtersettings h3, #filtersettings h4 {
 	text-align: center;	
 }
 
 #filtersettings p {
-	font-size: 8px;
+	font-size: 10px;
+}
+
+#slider {
+	margin: auto;
+	width: 620px;	
 }
 
 #less {
-	margin: -15px 0 0 550px;
+	margin: -15px 0 0 600px;
 	float: left;
 }
 
 #more {
-	margin: -15px 0 0 5px;
+	margin: -15px 0 0 45px;
 	float: left;
 }
 
 
 /*	Descriptions 	*/
-.description {
+#descriptions {
+	border-top: 2px solid #a3a2a8;
+}
+	
+.hidden {
 	display: none;
 }
 
-.descriptionShow {
-	width: 475px;
-	margin: auto;	
+.description {
+	margin: 0 auto 0 auto;
+	width: 540px;
 }
 
 
 /*	Footer	*/
 
 #footer {
-	background: black;
-	width: 100%;
-	font-size: 12px;
+	-webkit-border-bottom-left-radius: 4px;
+	-webkit-border-bottom-right-radius: 4px;
+}
+
+#footer p {
 	text-align: center;
-	color: white;
+	color: black;
+	font-size: 14px;
+	margin: 0;
+	padding: 5px;
+}
+
+/* Photo credit	*/
+#photocredit {
+	background: rgba(36, 38, 58, 0.5);
+	height: 25px;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	margin: 0;
+	padding: 2px;
+}
+
+#photocredit p {
+	font-size: 10px;
+	text-align: right;
+}
+
+/*	Statistics 	*/
+#stats {
+	border-top: 2px solid #a3a2a8;
+	width: auto;
+	padding: 5px 0 5px 195px;
+}
+
+#stats h4, #stats p {
+	text-align: center;
+	padding: 0 3px 0 0;
+	display: inline;
 }

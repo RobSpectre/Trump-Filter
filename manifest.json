@@ -6,7 +6,7 @@
   "options_page": "options.html",
   "page_action" :
   {
-    "default_icon" : "images/icon.png",
+    "default_icon" : "images/icon-19x19.png",
     "default_title" : "Warning: Number Two is on this page!"
   },
   "content_scripts": [
@@ -21,7 +21,7 @@
     }
   ],
   "icons" : {
-    "19" : "images/icon.png",
-    "130" : "images/icon-big.png"
+    "19" : "images/icon-19x19.png",
+    "130" : "images/icon-130x130.png"
   }
 }

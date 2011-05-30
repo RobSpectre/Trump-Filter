@@ -18,6 +18,12 @@ Four functions currently:
 			console.log("Retrieving user's filter settings...");
 			console.log(localStorage.selectedFilter);
 			sendResponse({filter: localStorage.selectedFilter});
+		} else if (request.method == "saveStats") { 
+			console.log("Storing stats...");
+			console.log ("Adding " + request.jeters + " Jeters to stats.");
+			localStorage.jeters = parseInt(localStorage.jeters) + parseInt(request.jeters);
+			localStorage.pages = parseInt(localStorage.pages) + 1;
+			sendResponse({});
 		} else {
 			console.log("Putting badge on address bar.");
 			chrome.pageAction.show(sender.tab.id);

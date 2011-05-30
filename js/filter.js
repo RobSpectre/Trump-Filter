@@ -48,6 +48,9 @@ if (search) {
 	   console.log("Filter setting stored is: " + response.filter);
 	   elements = getElements(response.filter);
 	   filterElements(elements);
+	   chrome.extension.sendRequest({method: "saveStats", jeters: elements.length}, function(response) {
+			  console.log("Logging " + elements.length + " jeters."); 
+		   });
 	 });
   chrome.extension.sendRequest({}, function(response) {});
 }

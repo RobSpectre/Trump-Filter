@@ -46,7 +46,7 @@ function saveOptions() {
 
 function setDescriptions(values, selected) {
 	for (key in values) {
-		$('#' + values[key]).removeClass("descriptionShow").addClass("description");
+		$('#' + values[key]).removeClass("description").addClass("hidden");
 	}
-	$('#' + selected).removeClass("description").addClass("descriptionShow");
+	$('#' + selected).removeClass("hidden").addClass("description");
 }
