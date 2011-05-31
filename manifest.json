@@ -26,7 +26,11 @@
     }
   ],
   "icons" : {
-    "19" : "images/icon-19x19.png",
-    "130" : "images/icon-130x130.png"
+  	"16": "images/icon-16x16.png",
+    "19": "images/icon-19x19.png",
+    "48": "images/icon-48x48.png",
+    "128": "images/icon-128x128.png",
+    "130": "images/icon-130x130.png",
+    "550": "images/icon-550x550.png"
   }
 }
