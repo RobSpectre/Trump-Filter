@@ -7,16 +7,17 @@ Allows user to adjust filtration settings.
 <html>
 <head>
 	<title>Options for Jeter Filter</title>
+	<link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
 	<link href="styles/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" />
 	<link href="styles/index.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
 	<script type="text/javascript" src="js/options.js"></script>
 	<script type="text/javascript" src="js/analytics.js"></script>
-	<script type="text/javascript">
+	<script type="text/javascript">	
 		$(function() {
+			// Configure slider
 			$('#slider').slider({
-				//step: 25,
 				min: 0,
 				max: 500,
 				slide: function( event, ui ) {	
@@ -26,6 +27,19 @@ Allows user to adjust filtration settings.
 				}
 			});
 			loadOptions(values);
+
+			// Populate stats
+			var pageCount = localStorage["pages"];
+			var jeterCount = localStorage["jeters"];		
+			if (isNaN(parseInt(pageCount)) || isNaN(parseInt(jeterCount))) {
+				console.log("Is this shit working?");
+				pageCount = 0;
+				jeterCount = 0;
+				localStorage["pages"] = 0;
+				localStorage["jeters"] = 0;
+			}
+			$('#pagecount').text(pageCount);
+			$('#jetercount').text(jeterCount);			
 		});	
 	</script>
 </head>
@@ -34,15 +48,15 @@ Allows user to adjust filtration settings.
 		<div id="header">
 			<h1>Jeter Filter</h1>
 		</div>
-		<div id="filtersettings">
+		<div id="filtersettings" class="contentContainer">
 			<h2>Filter Sensitivity</h2>
 			<p id="more">More Jeter</p>
 			<p id="less">Less Jeter</p>
 			<div id="slider"></div>
 			<h3 id="setting"></h3>
 		</div>
-		<div id="descriptions">
-			<div id="Mild" class="description">
+		<div id="descriptions" class="contentContainer">
+			<div id="Mild" class="hidden">
 				<h4>Least intrusive, least safe.</h4>
 				<ul>
 					<li>Removes individual mentions of Number Two.</li>
@@ -51,7 +65,7 @@ Allows user to adjust filtration settings.
 					<li>For those who merely hate Derek Jeter.</li>
 				</ul>
 			</div>
-			<div id="Aggressive" class="description">
+			<div id="Aggressive" class="hidden">
 				<h4>Default setting.  Great protection.</h4>
 				<ul>
 					<li>Removes sections of page likely to contain Number Two.</li>
@@ -60,7 +74,7 @@ Allows user to adjust filtration settings.
 					<li>For those who really hate Derek Jeter.</li>
 				</ul>
 			</div>
-			<div id="Vindictive" class="description">
+			<div id="Vindictive" class="hidden">
 				<h4>Wipe out the evil from the very face of the Internet.</h4>
 				<ul>
 					<li>Sweeping removal of all possible exposure to Number Two.</li>
@@ -70,9 +84,18 @@ Allows user to adjust filtration settings.
 				</ul>
 			</div>
 		</div>
-		<div id="footer">
-			<p>This work is licensed under GPLv3.  Created by Rob Spectre.  Lovingly crafted in Brooklyn, NY.</p>
+		<div id="stats" class="contentContainer">
+			<h4>Pages filtered:</h4>
+			<p id="pagecount"></p>
+			<h4>Jeters removed:</h4>
+			<p id="jetercount"></p>			
 		</div>
+		<div id="footer">
+			<p>This work is licensed under GPLv3.  Created by <a href="http://www.facebook.com/rob.spectre">Rob Spectre</a>.  Lovingly crafted in Brooklyn, NY.</p>
+		</div>
+	</div>
+	<div id="photocredit">
+		<p>Photo by <a href="http://www.flickr.com/photos/walkn/">walknboston</a>.</p>
 	</div>
 </body>
 </html>

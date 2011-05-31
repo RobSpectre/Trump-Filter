@@ -19,6 +19,10 @@ function loadOptions(values) {
 		selectedFilter = defaultFilter;
 	}
 	
+	if (sliderValue == undefined) {
+		sliderValue = 250;
+	}
+	
 	var i = 0;
 	for (value in values) {
 		if (values[value] === selectedFilter) {
@@ -42,7 +46,7 @@ function saveOptions() {
 
 function setDescriptions(values, selected) {
 	for (key in values) {
-		$('#' + values[key]).removeClass("descriptionShow").addClass("description");
+		$('#' + values[key]).removeClass("description").addClass("hidden");
 	}
-	$('#' + selected).removeClass("description").addClass("descriptionShow");
+	$('#' + selected).removeClass("hidden").addClass("description");
 }
