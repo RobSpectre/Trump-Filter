@@ -7,6 +7,7 @@ Four functions currently:
 	2) Log URI with FluidInfo.
 	3) Log event with Google Analytics.
 	4) Get extension's stored values.
+	5) Log local statistics.
  --> 
 <!DOCTYPE html>
 <html> 
@@ -54,6 +55,7 @@ Four functions currently:
 			fluidDB.put({
 				url: 'about/' + encodeURIComponent(sender.tab.url) + '/jeterfilter/contains-jeter',
 				payload: Math.round(((new Date()).getTime()-Date.UTC(1970,0,1))/1000),
+				primitive: true,
 				async: false,
 				username: fluidDBUsername,
 				password: fluidDBPassword,
