@@ -7,7 +7,7 @@ Overview
 --------------------------
 Each day, millions of people all around the world browse the Internet at terrible risk to their emotional and psychological well being.  In this
 brave new world of the twenty-four news cycle, the ubiquitous usage of URI shorteners, and the virulence of content sharing, never has there been
-a more dangerous period for the average user than right now.  At any second, a wrong click can send a hapless victim to pages containing horrific
+a more dangerous period for the average Internet user than right now.  At any second, a wrong click can send a hapless victim to pages containing horrific
 exposure to the most disgusting, most vile, most gag-reflexive content imaginable from the black hearts of sick and twisted men.
 
 I am speaking, of course, about content with Derek Jeter.
