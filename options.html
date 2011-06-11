@@ -32,7 +32,6 @@ Allows user to adjust filtration settings.
 			var pageCount = localStorage["pages"];
 			var jeterCount = localStorage["jeters"];		
 			if (isNaN(parseInt(pageCount)) || isNaN(parseInt(jeterCount))) {
-				console.log("Is this shit working?");
 				pageCount = 0;
 				jeterCount = 0;
 				localStorage["pages"] = 0;
@@ -53,34 +52,33 @@ Allows user to adjust filtration settings.
 			<p id="more">More Jeter</p>
 			<p id="less">Less Jeter</p>
 			<div id="slider"></div>
-			<h3 id="setting"></h3>
 		</div>
 		<div id="descriptions" class="contentContainer">
+			<div id="settingContainer">
+				<h3 id="setting"></h3>
+			</div>
 			<div id="Mild" class="hidden">
 				<h4>Least intrusive, least safe.</h4>
 				<ul>
-					<li>Removes individual mentions of Number Two.</li>
-					<li>Does not remove parent block elements.</li>
-					<li>Ensure all page features are usable.</li>
+					<li>Removes individual mentions of Derek Jeter.</li>
+					<li>Restricts filtering to textual instances (mostly).</li>
 					<li>For those who merely hate Derek Jeter.</li>
 				</ul>
 			</div>
 			<div id="Aggressive" class="hidden">
 				<h4>Default setting.  Great protection.</h4>
 				<ul>
-					<li>Removes sections of page likely to contain Number Two.</li>
-					<li>Preserves elements of page unlikely to contain Number Two.</li>
-					<li>Best balance of protection and usefulness.</li>
+					<li>Removes sections of page likely to contain Derek Jeter.</li>
+					<li>Preserves elements of page unlikely to contain Derek Jeter.</li>
 					<li>For those who really hate Derek Jeter.</li>
 				</ul>
 			</div>
 			<div id="Vindictive" class="hidden">
-				<h4>Wipe out the evil from the very face of the Internet.</h4>
+				<h4>Wipe out evil from the entire Internet.</h4>
 				<ul>
-					<li>Sweeping removal of all possible exposure to Number Two.</li>
+					<li>Removes Derek Jeter and and the unrighteous page from whence it came.</li>
 					<li>Ensures no possible exposure to any shortstop horror.</li>
-					<li>Makes Jeter-related pages unviewable (thank God).</li>
-					<li>For those who really, <strong>really</strong> hate Derek Jeter.</li>
+					<li>For those who <strong>friggin'</strong> hate Derek Jeter.</li>
 				</ul>
 			</div>
 		</div>
@@ -91,7 +89,7 @@ Allows user to adjust filtration settings.
 			<p id="jetercount"></p>			
 		</div>
 		<div id="footer">
-			<p>This work is licensed under GPLv3.  Created by <a href="http://www.facebook.com/rob.spectre">Rob Spectre</a>.  Lovingly crafted in Brooklyn, NY.</p>
+			<p>This work is licensed under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>. Created by <a href="http://www.facebook.com/rob.spectre">Rob Spectre</a>. Lovingly crafted in Brooklyn, NY.</p>
 		</div>
 	</div>
 	<div id="photocredit">
