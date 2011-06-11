@@ -10,7 +10,7 @@ a {
 }
 
 body {
-	background: url('/images/background-1600x1294.png') no-repeat;
+	background: url('/images/background-1600x1294.jpg') no-repeat;
 	margin: 120px 0 0 0;
 }
 
@@ -154,7 +154,7 @@ div {
 
 #footer p {
 	color: black;
-	font-size: 0.843em;
+	font-size: 0.7em;
 	text-align: center;
 }
 
