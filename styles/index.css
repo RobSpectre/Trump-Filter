@@ -21,7 +21,7 @@ div {
 }
 
 #container {
-	background: rgba(36, 38, 58, 0.85);
+	background: rgba(36, 38, 58, 0.5);
 	width: 700px;
 	margin: 0 auto 0 auto;
 	-webkit-border-radius: 5px;
