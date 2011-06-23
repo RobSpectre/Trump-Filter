@@ -10,8 +10,8 @@ a {
 }
 
 body {
-	background: url('/images/background-1600x1294.jpg') no-repeat;
-	margin: 120px 0 0 0;
+	background: url('/images/background-1600x1294.jpg') center no-repeat;
+	margin: 40px 0 0 0;
 }
 
 div {
@@ -22,16 +22,16 @@ div {
 
 #container {
 	background: rgba(36, 38, 58, 0.5);
-	width: 700px;
+	width: 720px;
 	margin: 0 auto 0 auto;
-	-webkit-border-radius: 5px;
+	padding: 0;
+	-webkit-border-radius: 15px;
 }
 
 .contentContainer {
 	background: rgba(255, 255, 255, 0.9);
-	width: 100%;
-	margin: 0;
-	padding: 2px 0 10px 0;	
+	width: 700px;
+	padding: 10px;
 }
 
 
@@ -48,61 +48,57 @@ div {
 	display: none;
 }
 
-/*	Slider		*/
-#filtersettings {
-	padding: 10px 0 10px 0;
-}
 
-#filtersettings h2, #filtersettings h3, #filtersettings h4 {
-	text-align: center;
-}
+/*	Slider		*/
 
 #filtersettings p {
 	font-size: 13px;
 }
 
-#slider {
-	margin: auto;
-	width: 620px;	
-}
-
-#less {
-	margin: -20px 0 0 592px;
-	float: left;
-}
-
-#more {
-	margin: -20px 0 0 40px;
-	float: left;
-}
-
 
 /*	Descriptions 	*/
 
-#descriptions {
-	width: 620px;
-	padding: 10px 40px 40px 40px;
+#descriptions a {
+	color: black;	
 }
 
-#settingContainer {
+.setting {
+	float: left;
+	width: 220px;
+}
+
+.button {
+	background: rgb(36, 38, 58);
 	width: 220px;
 	height: 180px;
-	float: left;
-	text-align: center;
-	color: white;
-	-webkit-border-radius: 5px;
+	-webkit-border-radius: 10px;
 }
 
-.Mild {
-	background: url('/images/mild-220x180.png') no-repeat rgb(36, 38, 58);
+#Mild {
+	margin: 0 0 0 10px;
 }
 
-.Aggressive {
-	background: url('/images/aggressive-220x180.png') no-repeat rgb(36, 38, 58);
+#Mild .button {
+	background-image: url('../images/mild-220x180.png');
+	background-position: no-repeat;	
 }
 
-.Vindictive {
-	background: url('/images/vindictive-220x180.png') no-repeat rgb(36, 38, 58);
+#Aggressive {
+	margin: 0 0 0 10px;
+}
+
+#Aggressive .button {
+	background-image: url('../images/aggressive-220x180.png');
+	background-position: no-repeat;	
+}
+
+#Vindictive {
+	margin: 0 0 0 10px;
+}
+
+#Vindictive .button {
+	background-image: url('../images/vindictive-220x180.png');
+	background-position: no-repeat;
 }
 
 #settingContainer h3 {
@@ -135,19 +131,19 @@ div {
 /*	Footer	*/
 
 #footer {
-	width: 620px;
 	margin: 0;
 	padding: 0 40px 1px 40px;
-	-webkit-border-bottom-left-radius: 4px;
-	-webkit-border-bottom-right-radius: 4px;
 }
 
 #footer p {
-	color: black;
-	font-size: 0.75em;
+	color: white;
+	font-size: 14px;
 	text-align: center;
 }
 
+#footer a {
+	font-weight: bold;	
+}
 
 /* Photo credit	*/
 #photocredit {
@@ -162,6 +158,7 @@ div {
 }
 
 #photocredit p {
+	color: white;
 	font-size: 10px;
 	text-align: right;
 }
@@ -170,9 +167,6 @@ div {
 /*	Statistics 	*/
 #stats {
 	border-top: 2px solid #a3a2a8;
-	width: 620px;
-	margin: 0;
-	padding: 20px 40px 20px 40px;
 }
 
 #stats p {
@@ -185,4 +179,10 @@ div {
 	text-align: left;
 	padding: 0 0 0 90px;
 	display: inline;
+}
+
+/*	Extras	*/
+.clear {
+	clear: both;
+	height: 10px;
 }
