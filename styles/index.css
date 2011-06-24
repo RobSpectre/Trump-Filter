@@ -65,7 +65,16 @@ div {
 
 .selected {
 	background: rgba(96, 163, 114, 0.2);
-	border: 3px solid rgb(96, 163, 114);	
+	border: 3px solid rgb(96, 163, 114);
+	-webkit-transition-property: background-color, border-color;
+	-webkit-transition-duration: .3s, .3s;
+	-webkit-transition-timing-function: ease-in, ease-in;
+}
+
+.unselected {
+	-webkit-transition-property: background-color, border-color;
+	-webkit-transition-duration: .3s, .3s;
+	-webkit-transition-timing-function: ease-in, ease-in;
 }
 
 .setting {
@@ -73,6 +82,7 @@ div {
 	width: 194px;
 	height: 370px;
 	padding-left: 20px;
+	border: 3px solid #F8FCEC;
 }
 
 .button {
