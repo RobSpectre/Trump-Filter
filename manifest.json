@@ -1,6 +1,6 @@
 {
   "name": "Jeter Filter",
-  "version": "1.0",
+  "version": "1.1",
   "description": "Remove Derek Jeter from the Internet.",
   "background_page": "background.html",
   "options_page": "options.html",
