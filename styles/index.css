@@ -68,13 +68,13 @@ div {
 	border: 3px solid rgb(96, 163, 114);
 	-webkit-transition-property: background-color, border-color;
 	-webkit-transition-duration: .3s, .3s;
-	-webkit-transition-timing-function: ease-in, ease-in;
+	-webkit-transition-timing-function: ease-in-out, ease-in-out;
 }
 
 .unselected {
-	-webkit-transition-property: background-color, border-color;
+	-webkit-transition-property: background-color, border;
 	-webkit-transition-duration: .3s, .3s;
-	-webkit-transition-timing-function: ease-in, ease-in;
+	-webkit-transition-timing-function: ease-in-out, ease-in-out;
 }
 
 .setting {

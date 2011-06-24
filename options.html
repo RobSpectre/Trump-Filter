@@ -19,7 +19,7 @@ Allows user to adjust filtration settings.
 				e.preventDefault();
 				var value = $(this).attr('id');
 				localStorage["selectedFilter"] = value;
-				$('.selected').removeClass("selected");
+				$('.selected').removeClass("selected").addClass("unselected");
 				$(this).addClass("selected");
 				_gaq.push(['_trackEvent', 'ChangeFilter', value]);
 				console.log("Switching filter sensitivity to: " + value);
