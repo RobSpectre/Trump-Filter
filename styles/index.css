@@ -29,7 +29,7 @@ div {
 }
 
 .contentContainer {
-	background: rgba(255, 255, 255, 0.9);
+	background: #F8FCEC;
 	width: 700px;
 	padding: 10px;
 }
@@ -51,27 +51,49 @@ div {
 
 /*	Slider		*/
 
-#filtersettings p {
-	font-size: 13px;
+#filtersettings h2 {
+	margin-left: 30px;
 }
 
 
 /*	Descriptions 	*/
 
 #descriptions a {
+	display: block;
 	color: black;	
+}
+
+.selected {
+	background: rgba(96, 163, 114, 0.2);
+	border: 3px solid rgb(96, 163, 114);	
 }
 
 .setting {
 	float: left;
-	width: 220px;
+	width: 194px;
+	height: 370px;
+	padding-left: 20px;
 }
 
 .button {
 	background: rgb(36, 38, 58);
-	width: 220px;
-	height: 180px;
+	width: 140px;
+	height: 115px;
+	position: absolute;
+	top: 510px;
+	margin-left: 20px;
 	-webkit-border-radius: 10px;
+}
+
+.setting ul {
+	list-style: none;
+	margin-left: 0;
+	padding-left: 10px;
+	border-left: 3px solid rgb(96, 163, 114);	
+}
+
+.setting li {
+	margin-bottom: 5px;	
 }
 
 #Mild {
@@ -80,7 +102,7 @@ div {
 
 #Mild .button {
 	background-image: url('../images/mild-220x180.png');
-	background-position: no-repeat;	
+	background-position: center no-repeat;	
 }
 
 #Aggressive {
@@ -137,7 +159,7 @@ div {
 
 #footer p {
 	color: white;
-	font-size: 14px;
+	font-size: .8em;
 	text-align: center;
 }
 
@@ -177,7 +199,7 @@ div {
 
 #stats h4 {
 	text-align: left;
-	padding: 0 0 0 90px;
+	padding: 0 0 0 120px;
 	display: inline;
 }
 

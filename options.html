@@ -8,16 +8,26 @@ Allows user to adjust filtration settings.
 <head>
 	<title>Options for Jeter Filter</title>
 	<link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
-	<link href="styles/jquery-ui-1.8.13.custom.css" rel="stylesheet" type="text/css" />
 	<link href="styles/index.css" rel="stylesheet" type="text/css" />
 	<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
 	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
 	<script type="text/javascript" src="js/options.js"></script>
 	<script type="text/javascript" src="js/analytics.js"></script>
 	<script type="text/javascript">	
+		$(document).ready(function() {
+			$('.setting').click(function(e) {
+				e.preventDefault();
+				var value = $(this).attr('id');
+				localStorage["selectedFilter"] = value;
+				$('.selected').removeClass("selected");
+				$(this).addClass("selected");
+				_gaq.push(['_trackEvent', 'ChangeFilter', value]);
+				console.log("Switching filter sensitivity to: " + value);
+			});
+		});
 	</script>
 </head>
-<body>
+<body onload="loadOptions()">
 	<div id="container">
 		<div id="header">
 			<h1>Jeter Filter</h1>
@@ -26,41 +36,35 @@ Allows user to adjust filtration settings.
 			<h2>Filter Sensitivity</h2>
 		</div>
 		<div id="descriptions" class="contentContainer">
-			<a href="#" onclick="saveOptions('Mild')">
-				<div id="Mild" class="setting">
-					<h3>Mild</h3>
-					<h4>Least intrusive, least safe.</h4>
-					<ul>
-						<li>Removes individual mentions of Derek Jeter.</li>
-						<li>Restricts filtering to textual instances (mostly).</li>
-						<li>For those who merely hate Derek Jeter.</li>
-					</ul>
-					<div class="button"></div>
-				</div>
+			<a href="#" id="Mild" class="setting">
+				<h3>Mild</h3>
+				<h4>Less is more.</h4>
+				<ul>
+					<li>Minimal impact</li>
+					<li>Mostly text</li>
+					<li>Merely filters Jeter</li>
+				</ul>
+				<div class="button"></div>
 			</a>
-			<a href="#" onclick="saveOptions('Aggressive')">
-				<div id="Aggressive" class="setting">
-					<h3>Aggressive</h3>
-					<h4>Default setting.  Great protection.</h4>
-					<ul>
-						<li>Removes sections of page likely to contain Derek Jeter.</li>
-						<li>Preserves elements of page unlikely to contain Derek Jeter.</li>
-						<li>For those who really hate Derek Jeter.</li>
-					</ul>
-					<div class="button"></div>
-				</div>
+			<a href="#" id="Aggressive" class="setting">
+				<h3>Aggressive</h3>
+				<h4>Default setting.</h4>
+				<ul>
+					<li>Shotgun approach</li>
+					<li>Carves out swath of page</li>
+					<li>Really filters Jeter</li>
+				</ul>
+				<div class="button"></div>
 			</a>
-			<a href="#" onclick="saveOptions('Vindictive')">
-				<div id="Vindictive" class="setting">
-					<h3>Vindictive</h3>
-					<h4>Wipe out evil from the entire Internet.</h4>
-					<ul>
-						<li>Removes Derek Jeter and and the unrighteous page from whence it came.</li>
-						<li>Ensures no possible exposure to any shortstop horror.</li>
-						<li>For those who <strong>friggin'</strong> hate Derek Jeter.</li>
-					</ul>
-					<a href="#"><div class="button"></div></a>
-				</div>
+			<a href="#" id="Vindictive" class="setting">
+				<h3>Vindictive</h3>
+				<h4>Boom.</h4>
+				<ul>
+					<li>Jeter Extinction Event</li>
+					<li>Renders page mostly unusable.</li>
+					<li><strong>Friggin'</strong> filters Jeter</li>
+				</ul>
+				<div class="button"></div>
 			</a>
 			<div class="clear"></div>
 		</div>
