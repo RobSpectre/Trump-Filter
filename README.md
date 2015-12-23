@@ -1,35 +1,35 @@
-Jeter Filter
+Trump Filter
 ================================
-A Chrome extension that removes Derek Jeter from the Internet.
+A Chrome extension that removes Donald Trump from the Internet.
 
 
 Overview
 --------------------------
-Each day, millions of people all around the world browse the Internet at terrible risk to their emotional and psychological well being.  In this
-brave new world of the twenty-four news cycle, the ubiquitous usage of URI shorteners, and the virulence of content sharing, never has there been
-a more dangerous period for the average Internet user than right now.  At any second, a wrong click can send a hapless victim to pages containing horrific
-exposure to the most disgusting, most vile, most gag-reflexive content imaginable from the black hearts of sick and twisted men.
+In a culture fueled by celebrity and an electorate engineered for polarity,
+how can any one in these United States of America be surprised by the campaign
+of Donald J. Trump? Minted by shady back room real estate, distributed by
+reality television and crowned by incessant polling of ultra-early primary
+voters, Trump is the latest, hilarious permutation of American leadership. He is
+not the candidate we need, but surely the one we deserve.
 
-I am speaking, of course, about content with Derek Jeter.
+In a political atmosphere where ascendance can be manufactured through attention,
+the only way to deflate Trump's political star is through suffocation. Trump 
+can only lose if we turn off the TV.
 
-The Jeter Filter is a Chrome extension that removes Derek Jeter from the Internet, thus ending this long national nightmare.  With this extension,
-you can enjoy a safe browsing experience with active search and removal of Derek Jeter on the pages you visit.  You can adjust the Jeter Filter to
-the setting that fits your lifestyle, choosing between "Mild," "Aggressive," and the safest, most popular "Vindictive."  Further, all sites found to
-contain Jeter while you are using the Jeter Filter are anonymously logged to FluidInfo, making it easier for developers on other platforms to add 
-Jeter filtering to their experiences.
+Thus, the Trump Filter is presented as part of the antidote for this toxic
+candidacy. This Chrome extension will identify parts of a web page likely to
+contain Donald Trump and erase them from the Internet.
 
-This means the more you browse with the Jeter Filter, the easier it becomes for the world to filter more Jeter.
-
-And the easier it becomes for the world to filter out Derek Jeter, the better we are all for living it.  
+Share with your friends and eliminate the only currency Trump can spend to win:
+brand recognition.
 
 
 Features
 --------------------------
 
-* Detects instances of Derek Jeter on web pages, warning users of the horror they may contain.
-* Attempts to identify semantically sections of the page likely to contain Derek Jeter and removes them from the page.
+* Detects instances of Donald Trump on web pages, warning users of the horror they may contain.
+* Attempts to identify semantically sections of the page likely to contain Donald Trump and removes them from the page.
 * Sensitivity settings to customize the aggressiveness of the filter - remove single references, chunks or the entire page.
-* Anonymously logs URIs containing Derek Jeter on FluidInfo in an effort to make filtering Derek Jeter easier for app developers worldwide.
 
 
 Installation (for Users)
@@ -43,13 +43,13 @@ Then surf the web, comforted by the protection you are now afforded.
 
 Installation (for Developers)
 -------------------------
-Want to hack on the Jeter Filter?  Sweet!
+Want to hack on the Trump Filter?  Sweet!
 
 Here's a howto to get the source of the Chrome Extension running in your environment.
 
 1) Grab latest source
 <pre>
-git clone git@github.com:RobSpectre/Jeter-Filter.git
+git clone https://RobSpectre/Trump-Filter.git
 </pre>
 
 2) Enable Chrome Extension in your Chrome install
@@ -65,6 +65,9 @@ Chuckle to self as you reload this page and significant chunks of it suddenly di
 3) Make the world a safer place.
 
 
-About
+Meta
 -------------------------
-This work is licensed under GPLv3.  Created by Rob Spectre.  Lovingly crafted in Brooklyn, NY.
+
+* Created by [Rob Spectre](http://brooklynhacker.com).
+* This work is licensed under GPLv3.
+* Lovingly crafted in Brooklyn, NY.
