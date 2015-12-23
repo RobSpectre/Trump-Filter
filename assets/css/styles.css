@@ -1697,9 +1697,10 @@ select {
     text-align: center;
   }
   .trump-hero {
-    background-image: url('../images/trump/hero-fading-trump-954x682.png');
-    width: 954px;
-    height: 470px;
+    background-image: url('../images/trump/hero-america-great-600x418.png');
+    width: 600px;
+    height: 418px;
+    margin-top: 4em;
   }
 }
 /* Large devices (large desktops, 1200px and up) */
