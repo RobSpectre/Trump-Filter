@@ -1,34 +1,34 @@
 /*
- * Jeter Filter - Content Script
+ * Trump Filter - Content Script
  * 
- * This is the primary JS file that manages the detection and filtration of Number Two from the web page.
+ * This is the primary JS file that manages the detection and filtration of Donald Trump from the web page.
  */
 
 // Variables
-var regex = /Jeter/i;
+var regex = /Trump/i;
 var search = regex.exec(document.body.innerText);
 
 
 // Functions
 function filterMild() {
-	console.log("Filtering Number Two with Vindictive filter...");
-	return $(":contains('Jeter'), :contains('JETER'), :contains('jeter')").filter(":not('body'):not('html'):not('div')");
+	console.log("Filtering Trump with Mild filter...");
+	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":not('body'):not('html'):not('div')");
 }
 
 function filterDefault () {
-	console.log("Filtering Number Two with Default filter...");
-	return $(":contains('Jeter'), :contains('JETER'), :contains('jeter')").filter(":not('body'):not('html'):not('div')").closest('div');
+	console.log("Filtering Trump with Default filter...");
+	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":not('body'):not('html'):not('div')").closest('div');
 }
 
 function filterVindictive() {
-	console.log("Filtering Number Two with Vindictive filter...");
-	return $(":contains('Jeter'), :contains('JETER'), :contains('jeter')").filter(":only-child:last-child:not('body'):not('html')");
+	console.log("Filtering Trump with Vindictive filter...");
+	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":only-child:last-child:not('body'):not('html')");
 }
 
 function getElements(filter) {
-   if (filter == "Mild") {
+   if (filter == "mild") {
 	   return filterMild();
-   } else if (filter == "Vindictive") {
+   } else if (filter == "vindictive") {
 	   return filterVindictive();
    } else {
 	   return filterDefault();
@@ -43,14 +43,16 @@ function filterElements(elements) {
 
 // Implementation
 if (search) {
-   console.log("Number Two found on page! - Searching for elements...");
-   chrome.extension.sendRequest({method: "loadFilter"}, function(response) {
-	   console.log("Filter setting stored is: " + response.filter);
-	   elements = getElements(response.filter);
+   console.log("Donald Trump found on page! - Searching for elements...");
+   chrome.storage.sync.get({
+     filter: 'aggro',
+   }, function(items) {
+	   console.log("Filter setting stored is: " + items.filter);
+	   elements = getElements(items.filter);
 	   filterElements(elements);
-	   chrome.extension.sendRequest({method: "saveStats", jeters: elements.length}, function(response) {
-			  console.log("Logging " + elements.length + " jeters."); 
-		   });
+	   chrome.runtime.sendMessage({method: "saveStats", trumps: elements.length}, function(response) {
+			  console.log("Logging " + elements.length + " trumps."); 
+		 });
 	 });
-  chrome.extension.sendRequest({}, function(response) {});
+  chrome.runtime.sendMessage({}, function(response) {});
 }

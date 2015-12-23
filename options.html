@@ -1,85 +1,37 @@
 <!-- -
-Jeter Filter - Options Page
+Trump Filter - Options Page
 
 Allows user to adjust filtration settings.
  --> 
 <!DOCTYPE html>
 <html>
 <head>
-	<title>Options for Jeter Filter</title>
-	<link href='http://fonts.googleapis.com/css?family=Holtwood+One+SC' rel='stylesheet' type='text/css'>
-	<link href="styles/index.css" rel="stylesheet" type="text/css" />
-	<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-	<script type="text/javascript" src="js/jquery-ui-1.8.13.custom.min.js"></script>
-	<script type="text/javascript" src="js/options.js"></script>
+	<title>Options for Trump Filter</title>
 	<script type="text/javascript" src="js/analytics.js"></script>
-	<script type="text/javascript">	
-		$(document).ready(function() {
-			$('.setting').click(function(e) {
-				e.preventDefault();
-				var value = $(this).attr('id');
-				localStorage["selectedFilter"] = value;
-				$('.selected').removeClass("selected").addClass("unselected");
-				$(this).addClass("selected");
-				_gaq.push(['_trackEvent', 'ChangeFilter', value]);
-				console.log("Switching filter sensitivity to: " + value);
-			});
-		});
-	</script>
 </head>
-<body onload="loadOptions()">
+<body>
 	<div id="container">
-		<div id="header">
-			<h1>Jeter Filter</h1>
-		</div>
 		<div id="filtersettings" class="contentContainer">
 			<h2>Filter Sensitivity</h2>
 		</div>
-		<div id="descriptions" class="contentContainer">
-			<a href="#" id="Mild" class="setting">
-				<h3>Mild</h3>
-				<h4>Less is more.</h4>
-				<ul>
-					<li>Minimal impact</li>
-					<li>Mostly text</li>
-					<li>Merely filters Jeter</li>
-				</ul>
-				<div class="button"></div>
-			</a>
-			<a href="#" id="Aggressive" class="setting">
-				<h3>Aggressive</h3>
-				<h4>Default setting.</h4>
-				<ul>
-					<li>Shotgun approach</li>
-					<li>Carves out swath of page</li>
-					<li>Really filters Jeter</li>
-				</ul>
-				<div class="button"></div>
-			</a>
-			<a href="#" id="Vindictive" class="setting">
-				<h3>Vindictive</h3>
-				<h4>Boom.</h4>
-				<ul>
-					<li>Jeter Extinction Event</li>
-					<li>Renders page mostly unusable.</li>
-					<li><strong>Friggin'</strong> filters Jeter</li>
-				</ul>
-				<div class="button"></div>
-			</a>
-			<div class="clear"></div>
-		</div>
+    <div id="options">
+      <select id="selectedFilter">
+        <option value="mild">Mild</option>
+        <option value="aggro">Aggressive</option>
+        <option value="vindictive">Vindictive</option>
+      </select>
+      <div id="saveMessage"></div>
+    </div>
 		<div id="stats" class="contentContainer">
-			<h4>Pages filtered:</h4>
-			<p id="pagecount"></p>
-			<h4>Jeters removed:</h4>
-			<p id="jetercount"></p>			
+			<h4>Pages filtered: <span id="pagecount"></span></h4>
+			<h4>Trumps removed: <span id="trumpcount"></span></h4>
 		</div>
 		<div id="footer">
-			<p>This work is licensed under <a href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>. Created by <a href="http://about.me/robspectre">Rob Spectre</a>. Lovingly crafted in Brooklyn, NY.</p>
+			<p>This work is licensed under <a
+        href="http://www.gnu.org/licenses/gpl.html">GPLv3</a>. Created by <a
+      href="http://brooklynhacker.com">Rob Spectre</a>. Lovingly crafted in Brooklyn, NY.</p>
 		</div>
 	</div>
-	<div id="photocredit">
-		<p>Photo by <a href="http://www.flickr.com/photos/walkn/">walknboston</a>.</p>
-	</div>
+	<script type="text/javascript" src="js/options.js"></script>
 </body>
 </html>

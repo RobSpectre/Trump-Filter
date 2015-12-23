@@ -1,24 +1,36 @@
-var values = ["Mild", "Aggressive", "Vindictive"];
-var defaultFilter = "Aggressive";
+function saveOptions() {
+  var selectedFilter = document.getElementById('selectedFilter').value;
 
-function loadOptions() {
-	var selectedFilter = localStorage["selectedFilter"];
-
-	if (selectedFilter == undefined || (selectedFilter != "Mild" && selectedFilter != "default" && selectedFilter != "Vindictive")) {
-		selectedFilter = defaultFilter;
-	}
-	
-	$('#' + selectedFilter).addClass('selected');
-
-	// Populate stats
-	var pageCount = localStorage["pages"];
-	var jeterCount = localStorage["jeters"];		
-	if (isNaN(parseInt(pageCount)) || isNaN(parseInt(jeterCount))) {
-		pageCount = 0;
-		jeterCount = 0;
-		localStorage["pages"] = 0;
-		localStorage["jeters"] = 0;
-	}
-	$('#pagecount').text(pageCount);
-	$('#jetercount').text(jeterCount);
+  chrome.storage.sync.set({
+    filter: selectedFilter
+  }, function(items) {
+    var status = document.getElementById('saveMessage');
+    status.textContent = 'Filter selected - ' + items.filter; 
+    setTimeout(function() {
+      status.textContent = '';
+    }, 750);
+  });
 }
+
+function getOptions(callback) {
+  chrome.storage.sync.get({
+    filter: 'aggro',
+    trumps: 0,
+    pages: 0
+  }, function(items) {
+    document.getElementById('selectedFilter').value = items.filter;
+    document.getElementById('trumpcount').textContent = items.trumps;
+    document.getElementById('pagecount').textContent = items.pages;
+    callback(items.filter);
+    return items.filter;
+  });
+}
+
+function restoreOptions() {
+  getOptions(function(filter) {
+    document.getElementById('selectedFilter').value = filter;
+  });
+  document.getElementById('selectedFilter').addEventListener('click', saveOptions);
+}
+
+document.addEventListener('DOMContentLoaded', restoreOptions);

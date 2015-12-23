@@ -1,73 +1,17 @@
 <!-- -
-Jeter Filter - Background Page
+Trump Filter - Background Page
 
 Four functions currently:
 
 	1) Display badge in address bar alerting user that Number Two may be on page.
-	2) Log URI with FluidInfo.
-	3) Log event with Google Analytics.
-	4) Get extension's stored values.
-	5) Log local statistics.
+	2) Log event with Google Analytics.
+	3) Get extension's stored values.
+	4) Log local statistics.
  --> 
 <!DOCTYPE html>
 <html> 
   <head>
-	<script type="text/javascript" src="js/jquery-1.5.1.min.js"></script>
-  	<script type="text/javascript" src="js/analytics.js"></script>
-  	<script type="text/javascript" src="js/jsFluidDB.js"></script>
-    <script>
-      var fluidDBUsername = "jeterfilter";
-      var fluidDBPassword = "fucktheyankees";
-      
-      function onRequest(request, sender, sendResponse) {
-		if (request.method == "loadFilter") {
-			console.log("Retrieving user's filter settings...");
-			console.log(localStorage.selectedFilter);
-			sendResponse({filter: localStorage.selectedFilter});
-		} else if (request.method == "saveStats") { 
-			console.log("Storing stats...");
-			console.log ("Adding " + request.jeters + " Jeters to stats.");
-			localStorage.jeters = parseInt(localStorage.jeters) + parseInt(request.jeters);
-			localStorage.pages = parseInt(localStorage.pages) + 1;
-			sendResponse({});
-		} else {
-			// Show icon
-			console.log("Putting badge on address bar.");
-			chrome.pageAction.show(sender.tab.id);
-
-			// Log event with Google Analytics
-			console.log("Logging URI with Number Two: " + sender.tab.url);
-			_gaq.push(['_trackEvent', 'Filter', sender.tab.url]);
-
-			// Log Event with FluidInfo
-			
-			console.log("Publishing URI to FluidInfo: " + sender.tab.url);
-			fluidDB.post({
-				url: 'about/' + encodeURIComponent(sender.tab.url),
-				async: false,
-				username: fluidDBUsername,
-				password: fluidDBPassword,
-				success: function(json) {
-					console.log('URI Logged: ' + encodeURIComponent(sender.tab.url));
-					console.log(json);
-				}
-			});
-			fluidDB.put({
-				url: 'about/' + encodeURIComponent(sender.tab.url) + '/jeterfilter/contains-jeter',
-				payload: Math.round(((new Date()).getTime()-Date.UTC(1970,0,1))/1000),
-				primitive: true,
-				async: false,
-				username: fluidDBUsername,
-				password: fluidDBPassword,
-				success: function(json) {
-					console.log('URI tagged as containing Jeter.');
-				}			
-			});
-			
-			sendResponse({});
-		}
-      }
-      chrome.extension.onRequest.addListener(onRequest);
-    </script> 
+  <script type="text/javascript" src="js/analytics.js"></script>
+  <script type="text/javascript" src="js/background.js"></script>
   </head> 
 </html> 
