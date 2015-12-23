@@ -14,17 +14,13 @@
 	],
   "content_scripts": [
     { 
-      "exclude_globs": [
-        "http://jeterfilter.com", 
-        "http://*.jeterfilter.com", 
-        "http://github.com", 
-        "http://*.github.com", 
-        "https://github.com", 
-        "https://*.github.com"
-      ],
       "matches": [
         "http://*/*",
         "https://*/*"
+      ],
+      "exclude_globs": [
+        "*://*trumpfilter.com*", 
+        "*://*github.com*"
       ],
       "js": ["js/jquery-2.1.4.min.js", "js/filter.js"],
       "run_at": "document_idle",
