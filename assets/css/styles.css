@@ -466,6 +466,7 @@ select {
 }
 
 .promo .overview .btn-group li.chrome-btn a {
+  margin-left: -3em;
   background-image: url('../images/buttons/btn-chrome-web-store.png');
   width: 340px;
   height: 96px;
