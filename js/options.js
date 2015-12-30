@@ -14,7 +14,7 @@ function saveOptions() {
 
 function getOptions(callback) {
   chrome.storage.sync.get({
-    filter: 'aggro',
+    filter: 'mild',
     trumps: 0,
     pages: 0
   }, function(items) {

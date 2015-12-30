@@ -20,8 +20,9 @@ function onMessage(request, sender, sendResponse) {
     // Log event with Google Analytics
     console.log("Logging Filter event...");
     chrome.storage.sync.get({
-      filter: 'aggro'
+      filter: 'mild'
     }, function(items) {
+      console.log("Filtering on " + items.filter + " setting.");
       ga('send', 'event', 'Filter', 'Trump', items.filter);
     });
     sendResponse({});

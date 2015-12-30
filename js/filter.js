@@ -30,8 +30,10 @@ function getElements(filter) {
 	   return filterMild();
    } else if (filter == "vindictive") {
 	   return filterVindictive();
-   } else {
+   } else if (filter == "aggro") {
 	   return filterDefault();
+   } else {
+     return filterMild();
    }
 }
 
