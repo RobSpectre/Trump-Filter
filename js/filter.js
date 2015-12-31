@@ -1,28 +1,28 @@
 /*
- * Trump Filter - Content Script
+ * Sanders Filter - Content Script
  * 
- * This is the primary JS file that manages the detection and filtration of Donald Trump from the web page.
+ * This is the primary JS file that manages the detection and filtration of Bernie Sanders from the web page.
  */
 
 // Variables
-var regex = /Trump/i;
+var regex = /Sanders/i;
 var search = regex.exec(document.body.innerText);
 
 
 // Functions
 function filterMild() {
-	console.log("Filtering Trump with Mild filter...");
-	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter("h1,h2,h3,h4,h5,p,span,li");
+	console.log("Filtering Sadners with Mild filter...");
+	return $(":contains('Sanders'), :contains('SANDERS'), :contains('sanders')").filter("h1,h2,h3,h4,h5,p,span,li");
 }
 
 function filterDefault () {
-	console.log("Filtering Trump with Default filter...");
-	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":only-child").closest('div');
+	console.log("Filtering Sanders with Default filter...");
+	return $(":contains('Sanders'), :contains('SANDERS'), :contains('sanders')").filter(":only-child").closest('div');
 }
 
 function filterVindictive() {
-	console.log("Filtering Trump with Vindictive filter...");
-	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":not('body'):not('html')");
+	console.log("Filtering Sanders with Vindictive filter...");
+	return $(":contains('Sanders'), :contains('SANDERS'), :contains('sanders')").filter(":not('body'):not('html')");
 }
 
 function getElements(filter) {
@@ -43,15 +43,15 @@ function filterElements(elements) {
 
 // Implementation
 if (search) {
-   console.log("Donald Trump found on page! - Searching for elements...");
+   console.log("Bernie Sanders found on page! - Searching for elements...");
    chrome.storage.sync.get({
      filter: 'aggro',
    }, function(items) {
 	   console.log("Filter setting stored is: " + items.filter);
 	   elements = getElements(items.filter);
 	   filterElements(elements);
-	   chrome.runtime.sendMessage({method: "saveStats", trumps: elements.length}, function(response) {
-			  console.log("Logging " + elements.length + " trumps."); 
+	   chrome.runtime.sendMessage({method: "saveStats", sanders: elements.length}, function(response) {
+			  console.log("Logging " + elements.length + " sanders."); 
 		 });
 	 });
   chrome.runtime.sendMessage({}, function(response) {});

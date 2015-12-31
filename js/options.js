@@ -15,11 +15,11 @@ function saveOptions() {
 function getOptions(callback) {
   chrome.storage.sync.get({
     filter: 'aggro',
-    trumps: 0,
+    sanders: 0,
     pages: 0
   }, function(items) {
     document.getElementById('selectedFilter').value = items.filter;
-    document.getElementById('trumpcount').textContent = items.trumps;
+    document.getElementById('sanderscount').textContent = items.sanders;
     document.getElementById('pagecount').textContent = items.pages;
     callback(items.filter);
     return items.filter;
