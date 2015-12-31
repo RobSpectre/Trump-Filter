@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "Trump Filter",
+  "name": "Sanders Filter",
   "version": "1.0",
-  "description": "Remove Donald Trump from the Internet.",
+  "description": "Remove Bernie Sanders from the Internet.",
   "page_action" :
   {
     "default_icon" : "images/icon-19x19.png",
-    "default_title" : "Warning: Trump is on this page!"
+    "default_title" : "Warning: Sanders is on this page!"
   },
   "permissions": [
     "tabs",
@@ -19,7 +19,6 @@
         "https://*/*"
       ],
       "exclude_globs": [
-        "*://*trumpfilter.com*", 
         "*://*github.com*"
       ],
       "js": ["js/jquery-2.1.4.min.js", "js/filter.js"],
