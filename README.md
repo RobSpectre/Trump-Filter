@@ -58,7 +58,7 @@ Open Chrome.
 Navigate to Settings... Tools... Extensions.
 Click + on "Developer mode"
 Click "Load unpacked extensions..."
-Navigate to directory you installed Jeter Filter and click Open.
+Navigate to directory you installed Trump Filter and click Open.
 Chuckle to self as you reload this page and significant chunks of it suddenly disappear.
 </pre>
 
