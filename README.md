@@ -1,6 +1,8 @@
-Trump Filter
+PokeGone
 ================================
-A Chrome extension that removes Donald Trump from the Internet.
+A Chrome extension that removes Pokemon from the Internet.
+
+TODO: update readme...
 
 
 Overview
