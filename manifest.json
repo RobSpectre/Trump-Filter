@@ -1,12 +1,12 @@
 {
   "manifest_version": 2,
-  "name": "PokeGone",
-  "version": "1.0",
-  "description": "Remove Pokemon from the Internet.",
+  "name": "PokeGone - Gotta block 'em all",
+  "version": "1.1",
+  "description": "Remove Pokemon from the Internet!",
   "page_action" :
   {
     "default_icon" : "images/icon-19x19.png",
-    "default_title" : "Warning: Pokemon is on this page!"
+    "default_title" : "Warning: Pokemon are on this page!"
   },
   "permissions": [
     "tabs",
