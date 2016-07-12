@@ -5,24 +5,24 @@
  */
 
 // Variables
-var regex = /pokemon/i;
+var regex = /Pokemon/i;
 var search = regex.exec(document.body.innerText);
 
 
 // Functions
 function filterMild() {
 	console.log("Filtering pokemon with Mild filter...");
-	return $(":contains('pokemon'), :contains('pokemon'), :contains('pokemon')").filter("h1,h2,h3,h4,h5,p,span,li");
+	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon'), :contains('Pokémon, :contains('pokémon')").filter("h1,h2,h3,h4,h5,p,span,li");
 }
 
 function filterDefault () {
 	console.log("Filtering pokemon with Default filter...");
-	return $(":contains('pokemon'), :contains('pokemon'), :contains('pokemon')").filter(":only-child").closest('div');
+	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon), :contains('Pokémon, :contains('pokémon')").filter(":only-child").closest('div');
 }
 
 function filterVindictive() {
 	console.log("Filtering pokemon with Vindictive filter...");
-	return $(":contains('pokemon'), :contains('pokemon'), :contains('pokemon')").filter(":not('body'):not('html')");
+	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon'), :contains('Pokémon, :contains('pokémon')").filter(":not('body'):not('html')");
 }
 
 function getElements(filter) {
