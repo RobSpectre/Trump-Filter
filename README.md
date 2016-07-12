@@ -2,35 +2,19 @@ PokeGone
 ================================
 A Chrome extension that removes Pokemon from the Internet.
 
-TODO: update readme...
+TODO: update readme more...
 
 
 Overview
 --------------------------
-In a culture fueled by celebrity and an electorate engineered for polarity,
-how can any one in these United States of America be surprised by the campaign
-of Donald J. Trump? Minted by shady back room real estate, distributed by
-reality television and crowned by incessant polling of ultra-early primary
-voters, Trump is the latest, hilarious permutation of American leadership. He is
-not the candidate we need, but surely the one we deserve.
-
-In a political atmosphere where ascendance can be manufactured through attention,
-the only way to deflate Trump's political star is through suffocation. Trump 
-can only lose if we turn off the TV.
-
-Thus, the Trump Filter is presented as part of the antidote for this toxic
-candidacy. This Chrome extension will identify parts of a web page likely to
-contain Donald Trump and erase them from the Internet.
-
-Share with your friends and eliminate the only currency Trump can spend to win:
-brand recognition.
+Removes Pokemon Go references from the internet. 
 
 
 Features
 --------------------------
 
-* Detects instances of Donald Trump on web pages, warning users of the horror they may contain.
-* Attempts to identify semantically sections of the page likely to contain Donald Trump and removes them from the page.
+* Detects instances of Pokemon GO on web pages.
+* Attempts to identify semantically sections of the page likely to contain Pokemon Go reference and removes them from the page.
 * Sensitivity settings to customize the aggressiveness of the filter - remove single references, chunks or the entire page.
 
 
@@ -45,7 +29,7 @@ Then surf the web, comforted by the protection you are now afforded.
 
 Installation (for Developers)
 -------------------------
-Want to hack on the Trump Filter?  Sweet!
+Want to hack on the Pokemon Go Filter?  Sweet!
 
 Here's a howto to get the source of the Chrome Extension running in your environment.
 
