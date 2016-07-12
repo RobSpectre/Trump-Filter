@@ -11,15 +11,15 @@ var search = regex.exec(document.body.innerText);
 
 // Functions
 function filterMild() {
-	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon'), :contains('Pokémon, :contains('pokémon')").filter("h1,h2,h3,h4,h5,p,span,li");
+	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon'), :contains('Pokémon), :contains('pokémon')").filter("h1,h2,h3,h4,h5,p,span,li");
 }
 
 function filterDefault () {
-	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon), :contains('Pokémon, :contains('pokémon')").filter(":only-child").closest('div');
+	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon), :contains('Pokémon), :contains('pokémon')").filter(":only-child").closest('div');
 }
 
 function filterVindictive() {
-	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon'), :contains('Pokémon, :contains('pokémon')").filter(":not('body'):not('html')");
+	return $(":contains('POKEMON'), :contains('Pokemon'), :contains('pokemon'), :contains('Pokémon), :contains('pokémon')").filter(":not('body'):not('html')");
 }
 
 function getElements(filter) {
