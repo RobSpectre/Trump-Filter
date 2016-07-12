@@ -1,13 +1,14 @@
-PokeGone
+PokeGone - Gotta block 'em all!
 ================================
 A Chrome extension that removes Pokemon from the Internet.
-
-TODO: update readme more...
 
 
 Overview
 --------------------------
-Removes Pokemon Go references from the internet. 
+
+All of a sudden, a new mobile app called Pokemon Go got extremely popular ([read about it on the Wall Street Journal](http://www.wsj.com/articles/pokemon-chasing-investors-send-nintendo-shares-soaring-1468228206)!). Because of this, the internet is full of people talking about all things Pokemon - which can be a little annoying.
+
+PokeGone removes Pokemon Go references from the internet so you can get to normal watching funny cat GIFs.
 
 
 Features
@@ -22,20 +23,23 @@ Installation (for Users)
 --------------------------
 
 Just install the extension from [the Chrome Web
-Store](https://chrome.google.com/webstore/detail/lhondapiaknegjpellpodegmeonigjic)!
+Store](https://chrome.google.com/webstore/detail/jionadcjdpdikjmgfohlohnclocfaija)!
 
-Then surf the web, comforted by the protection you are now afforded.
+Then surf the web as normal without worrying about bumping in to adults going mad about Pokemon.
 
 
 Installation (for Developers)
 -------------------------
-Want to hack on the Pokemon Go Filter?  Sweet!
 
-Here's a howto to get the source of the Chrome Extension running in your environment.
+Firstly, special thanks to Rob Spectre who made the [Trump Filter](https://github.com/RobSpectre/Trump-Filter)! Open Source (which this extension is completely based off).
+
+Want to hack on PokeGone?  Sweet!
+
+Here's a how to to get the source of the Chrome Extension running in your environment.
 
 1) Grab latest source
 <pre>
-git clone https://github.com/RobSpectre/Trump-Filter.git
+git clone https://github.com/JamieFarrelly/PokeGone
 </pre>
 
 2) Enable Chrome Extension in your Chrome install
@@ -44,7 +48,7 @@ Open Chrome.
 Navigate to Settings... Tools... Extensions.
 Click + on "Developer mode"
 Click "Load unpacked extensions..."
-Navigate to directory you installed Trump Filter and click Open.
+Navigate to directory you installed PokeGone and click Open.
 Chuckle to self as you reload this page and significant chunks of it suddenly disappear.
 </pre>
 
@@ -54,6 +58,5 @@ Chuckle to self as you reload this page and significant chunks of it suddenly di
 Meta
 -------------------------
 
-* Created by [Rob Spectre](http://brooklynhacker.com).
+* Special thanks to [Rob Spectre](http://brooklynhacker.com) since he done all of the hard work, I just hit find & replace.
 * This work is licensed under GPLv3.
-* Lovingly crafted in Brooklyn, NY.
