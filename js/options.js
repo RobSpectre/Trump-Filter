@@ -3,9 +3,9 @@ function saveOptions() {
 
   chrome.storage.sync.set({
     filter: selectedFilter
-  }, function(items) {
+  }, function() {
     var status = document.getElementById('saveMessage');
-    status.textContent = 'Filter selected - ' + items.filter; 
+    status.textContent = 'Filter selected - ' + selectedFilter;
     setTimeout(function() {
       status.textContent = '';
     }, 750);
@@ -15,11 +15,11 @@ function saveOptions() {
 function getOptions(callback) {
   chrome.storage.sync.get({
     filter: 'aggro',
-    trumps: 0,
+    pokemons: 0,
     pages: 0
   }, function(items) {
     document.getElementById('selectedFilter').value = items.filter;
-    document.getElementById('trumpcount').textContent = items.trumps;
+    document.getElementById('pokemoncount').textContent = items.pokemons;
     document.getElementById('pagecount').textContent = items.pages;
     callback(items.filter);
     return items.filter;
@@ -30,7 +30,7 @@ function restoreOptions() {
   getOptions(function(filter) {
     document.getElementById('selectedFilter').value = filter;
   });
-  document.getElementById('selectedFilter').addEventListener('click', saveOptions);
+  document.getElementById('selectedFilter').addEventListener('change', saveOptions);
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
