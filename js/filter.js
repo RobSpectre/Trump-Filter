@@ -7,22 +7,22 @@
 // Variables
 var regex = /Trump/i;
 var search = regex.exec(document.body.innerText);
-var $selector = $(":contains('Trump'), :contains('TRUMP'), :contains('trump')");
+
 
 // Functions
 function filterMild() {
 	console.log("Filtering Trump with Mild filter...");
-	return $selector.filter("h1,h2,h3,h4,h5,p,span,li");
+	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter("h1,h2,h3,h4,h5,p,span,li");
 }
 
 function filterDefault () {
 	console.log("Filtering Trump with Default filter...");
-	return $selector.filter(":only-child").closest('div');
+	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":only-child").closest('div');
 }
 
 function filterVindictive() {
 	console.log("Filtering Trump with Vindictive filter...");
-	return $selector.filter(":not('body'):not('html')");
+	return $(":contains('Trump'), :contains('TRUMP'), :contains('trump')").filter(":not('body'):not('html')");
 }
 
 function getElements(filter) {
