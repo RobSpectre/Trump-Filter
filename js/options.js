@@ -3,9 +3,9 @@ function saveOptions() {
 
   chrome.storage.sync.set({
     filter: selectedFilter
-  }, function(items) {
+  }, function() {
     var status = document.getElementById('saveMessage');
-    status.textContent = 'Filter selected - ' + items.filter; 
+    status.textContent = 'Filter selected - ' + selectedFilter;
     setTimeout(function() {
       status.textContent = '';
     }, 750);
@@ -30,7 +30,7 @@ function restoreOptions() {
   getOptions(function(filter) {
     document.getElementById('selectedFilter').value = filter;
   });
-  document.getElementById('selectedFilter').addEventListener('click', saveOptions);
+  document.getElementById('selectedFilter').addEventListener('change', saveOptions);
 }
 
 document.addEventListener('DOMContentLoaded', restoreOptions);
