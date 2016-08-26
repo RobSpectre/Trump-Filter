@@ -1,6 +1,6 @@
 /*
  * Trump Filter - Content Script
- * 
+ *
  * This is the primary JS file that manages the detection and filtration of Donald Trump from the web page.
  */
 
@@ -53,7 +53,7 @@ if (search) {
 	   elements = getElements(items.filter);
 	   filterElements(elements);
 	   chrome.runtime.sendMessage({method: "saveStats", trumps: elements.length}, function(response) {
-			  console.log("Logging " + elements.length + " trumps."); 
+			  console.log("Logging " + elements.length + " trumps.");
 		 });
 	 });
   chrome.runtime.sendMessage({}, function(response) {});
