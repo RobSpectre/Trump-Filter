@@ -5,4 +5,5 @@ m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
 
 ga('create', 'UA-1608534-17', 'auto');
 ga('set', 'checkProtocolTask', null);
+ga('set', 'anonymizeIp', true);
 ga('send', 'pageview', '/background.html');
