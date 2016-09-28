@@ -36,7 +36,7 @@ Installation (for Users)
 --------------------------
 
 Just install the extension from [the Chrome Web
-Store](https://chrome.google.com/webstore/detail/pgolkklipgikkpeknefbinnmhlmmdbfa)!
+Store](https://chrome.google.com/webstore/detail/lhondapiaknegjpellpodegmeonigjic)!
 
 Then surf the web, comforted by the protection you are now afforded.
 
@@ -49,7 +49,7 @@ Here's a howto to get the source of the Chrome Extension running in your environ
 
 1) Grab latest source
 <pre>
-git clone https://RobSpectre/Trump-Filter.git
+git clone https://github.com/RobSpectre/Trump-Filter.git
 </pre>
 
 2) Enable Chrome Extension in your Chrome install
@@ -58,7 +58,7 @@ Open Chrome.
 Navigate to Settings... Tools... Extensions.
 Click + on "Developer mode"
 Click "Load unpacked extensions..."
-Navigate to directory you installed Jeter Filter and click Open.
+Navigate to directory you installed Trump Filter and click Open.
 Chuckle to self as you reload this page and significant chunks of it suddenly disappear.
 </pre>
 
