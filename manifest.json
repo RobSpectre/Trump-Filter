@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Trump Filter",
-  "version": "1.0.1",
+  "version": "1.1.1",
   "description": "Remove Donald Trump from the Internet.",
   "page_action" :
   {
@@ -22,7 +22,7 @@
         "*://*trumpfilter.com*", 
         "*://*github.com*"
       ],
-      "js": ["js/jquery-2.1.4.min.js", "js/filter.js"],
+      "js": ["js/jquery-3.1.1.min.js", "js/filter.js"],
       "run_at": "document_idle",
       "all_frames": false
     }
