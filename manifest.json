@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "Trump Filter",
-  "version": "1.1.1",
+  "version": "1.1.2",
   "description": "Remove Donald Trump from the Internet.",
   "page_action" :
   {
@@ -9,7 +9,6 @@
     "default_title" : "Warning: Trump is on this page!"
   },
   "permissions": [
-    "tabs",
     "storage"
 	],
   "content_scripts": [
