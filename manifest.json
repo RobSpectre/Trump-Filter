@@ -1,12 +1,13 @@
 {
-  "manifest_version": 2,
+  "manifest_version": 3,
   "name": "Trump Filter",
-  "version": "1.1.2",
+  "version": "1.2",
   "description": "Remove Donald Trump from the Internet.",
-  "page_action" :
+  "action" :
   {
     "default_icon" : "images/icon-19x19.png",
-    "default_title" : "Warning: Trump is on this page!"
+    "default_title" : "Warning: Trump is on this page!",
+    "default_popup": "background.html"
   },
   "permissions": [
     "storage"
@@ -21,7 +22,7 @@
         "*://*trumpfilter.com*", 
         "*://*github.com*"
       ],
-      "js": ["js/jquery-3.1.1.min.js", "js/filter.js"],
+      "js": ["js/jquery-3.7.1.min.js", "js/filter.js"],
       "run_at": "document_idle",
       "all_frames": false
     }
@@ -32,15 +33,16 @@
     "48": "images/icon-48x48.png",
     "128": "images/icon-128x128.png",
     "130": "images/icon-130x130.png",
-    "550": "images/icon-550x550.png"
+    "550": "images/icon-550x550.png"  
   },
   "background": {
-    "persistent": false,
-    "page": "background.html"
+    "service_worker": "background.js"
   },
   "options_ui" : {
-    "chrome_style": true,
     "page": "options.html"
   },
-  "content_security_policy": "script-src 'self' https://www.google-analytics.com; object-src 'self'"
+  "content_security_policy": {
+    "extension_pages": "script-src 'self'; object-src 'self';",
+    "sandbox": "sandbox allow-scripts allow-forms allow-popups allow-modals; script-src 'self' 'unsafe-inline' 'unsafe-eval'; child-src 'self';"
+  } 
 }
