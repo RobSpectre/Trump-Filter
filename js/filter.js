@@ -15,7 +15,7 @@ var selector = ":contains('Trump'), :contains('TRUMP'), :contains('trump')";
 function filterMild() {
 	console.log("Filtering Trump with Mild filter...");
 	/*return $(selector).filter("h1,h2,h3,h4,h5,p,span,li");*/
-	return $(selector).filter("li,p,a");
+	return $(selector).filter("h1,h2,h3,h4,h5,li,p,a");
 }
 
 function filterDefault () {
